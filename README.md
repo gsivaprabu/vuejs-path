@@ -1,1 +1,1 @@
-# vuejs-path
+# Collection of vuejs concepts from youtube and blogs
