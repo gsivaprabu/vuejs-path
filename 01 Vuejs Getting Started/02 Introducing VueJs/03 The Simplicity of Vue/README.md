@@ -23,3 +23,6 @@
 	- Easy to maintain
 	- Easy to develop with
 	- Easy to learn
+
+“Vue provides an answer to the issue of JavaScript fatigue, and it is a worthy successor to the legacy of jQuery.”
+Peter Jang –Dean of Instruction at Actualize
