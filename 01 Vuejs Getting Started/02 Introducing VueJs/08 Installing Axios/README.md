@@ -1,4 +1,4 @@
-# 06 Introducing VueJs - Installing Axios
+# 08 Introducing VueJs - Installing Axios
 
 - Recommended library for making HTTP requests
 - Not part of Vue.js

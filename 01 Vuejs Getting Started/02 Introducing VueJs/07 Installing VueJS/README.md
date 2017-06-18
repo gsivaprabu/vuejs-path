@@ -1,4 +1,4 @@
-# 06 Introducing VueJs - Installing VueJS
+# 07 Introducing VueJs - Installing VueJS
 
 - Core library
 - Available via Content Delivery Network (CDN)
