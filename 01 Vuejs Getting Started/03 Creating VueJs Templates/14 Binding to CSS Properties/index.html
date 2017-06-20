@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>My Profile</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <div align="center" id="profile">
+        <img alt="Sivaprabu Ganesan" :src="profileLogo" />
+        <h2 v-text="profileName" v-bind:style="[accentColor, headers]"></h2>
+        <span v-text="profileDesignation" v-bind:style="{color:color}"></span>
+    </div>
+    <script type="text/javascript" src="../../00 libraries/vuejs/vue-2.3.3.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
