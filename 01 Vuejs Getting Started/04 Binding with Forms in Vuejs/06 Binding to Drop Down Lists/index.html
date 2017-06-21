@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../../00 libraries/bootstrap3/bootstrap.3.3.7.min.css">
+    <script src="../../00 libraries/bootstrap3/jquery.3.2.1.min.js"></script>
+    <script src="../../00 libraries/bootstrap3/bootstrap.3.3.7.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <div align="center" id="profile">
+        <img class="img-circle" alt="Sivaprabu Ganesan" :src="profileLogo" />
+        <h2 v-text="profileName" v-bind:class="{'headers': true,'accent-color': isOnline}">
+</h2>
+        <span v-text="profileDesignation" v-bind:style="{color:color?'yellow':'maroon'}"></span>
+        <br>
+        <select v-model="selectedSearchIndex">
+            <option value="beers">Beers</option>
+            <option value="breweries">Breweries</option>
+            <option value="distilleries">Distilleries</option>
+            <option value="pubs">Pubs</option>
+        </select>
+        <br>
+        <small>selected: {{ selectedSearchIndex}}</small><br>
+
+                <br>
+        <select multiple v-model="selectedSearchIndexMultiple">
+            <option value="beers">Beers</option>
+            <option value="breweries">Breweries</option>
+            <option value="distilleries">Distilleries</option>
+            <option value="pubs">Pubs</option>
+        </select>
+        <br>
+        <small>selected: {{ selectedSearchIndexMultiple}}</small><br>
+    </div>
+    <script type="text/javascript" src="../../00 libraries/vuejs/vue-2.3.3.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
