@@ -1,4 +1,4 @@
-# 07 Binding with Forms in Vuejs - Using the Trim Modifier
+# 08 Binding with Forms in Vuejs - Using the Trim Modifier
 
 ### Trim Modifier
 

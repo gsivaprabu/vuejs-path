@@ -1,4 +1,4 @@
-# 07 Binding with Forms in Vuejs - Using the Number Modifier
+# 09 Binding with Forms in Vuejs - Using the Number Modifier
 
 - Tries to cast user input to a number
 - HTML elements return values as strings
