@@ -13,9 +13,6 @@ var myProfile = new Vue({
             margin: 0
         },
         isOnline: true,
-        query: 'input tex message here',
-        emailMessage: 'texarea message here',
-        isPowerSyntaxEnabled: true,
-        searchIndexes: []
+        searchIndex: []
     }
 });

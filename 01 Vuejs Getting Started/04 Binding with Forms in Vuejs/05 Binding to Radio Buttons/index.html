@@ -17,29 +17,14 @@
 </h2>
         <span v-text="profileDesignation" v-bind:style="{color:color?'yellow':'maroon'}"></span>
         <br>
-        <br>
-        <input v-model="query" placeholder="Search...">
-        <br/>
-        <br/>
-        <div><b>Searching for: </b>{{ query }}</div>
-        <br>
-        <br>
-        <textarea v-model="emailMessage"></textarea>
-        <br>
-        <br>
-        <div>{{emailMessage}}</div>
-        <label>single check box</label>
-        <input type="checkbox" v-model="isPowerSyntaxEnabled">
-        <br>
-        <label>Multiple check box</label>
-        <label>
-            <input type="checkbox" value="beers" v-model="searchIndexes"> Beers
+        <label class="form-check-label">
+            <input type="radio" value="beers" v-model="searchIndex"> Beers
         </label>
-        <label>
-            <input type="checkbox" value="breweries" v-model="searchIndexes"> Breweries
+        <label class="form-check-label">
+            <input type="radio" value="breweries" v-model="searchIndex"> Breweries
         </label>
-        <br/>
-        <small>selected: {{ searchIndexes}}</small>
+        <br>
+        <small>selected: {{ searchIndex}}</small>
     </div>
     <script type="text/javascript" src="../../00 libraries/vuejs/vue-2.3.3.js"></script>
     <script type="text/javascript" src="script.js"></script>
