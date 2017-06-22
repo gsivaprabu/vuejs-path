@@ -18,6 +18,7 @@
 ### Using lazy and trim Modifier
 - Chaining modifiers together
 - Order modifiers assuming they get applied from left-to-right
+
 ```html
 <input v-model.lazy.trim="query" placeholder="Search...">
 ```

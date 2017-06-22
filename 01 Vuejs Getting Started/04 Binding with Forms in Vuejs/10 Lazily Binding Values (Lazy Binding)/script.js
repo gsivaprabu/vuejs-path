@@ -13,6 +13,7 @@ var myProfile = new Vue({
             margin: 0
         },
         isOnline: true,
-        result: ''
+        result: '',
+        trimModifierValue: ''
     }
 });

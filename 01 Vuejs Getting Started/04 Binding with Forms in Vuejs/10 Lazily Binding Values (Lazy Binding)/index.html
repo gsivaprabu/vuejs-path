@@ -18,10 +18,14 @@
         <span v-text="profileDesignation" v-bind:style="{color:color?'yellow':'maroon'}"></span>
         <br>
         <br>
-        <input v-model.number="result" placeholder="2+3=">
+        <input v-model.lazy="result">
         <br/>
         <br/>
         <div><b>Searching for: </b>{{ result }}</div>
+        <input v-model.lazy.trim="trimModifierValue">
+        <br/>
+        <br/>
+        <div><b>Searching for: </b>{{ trimModifierValue }}</div>
     </div>
     <script type="text/javascript" src="../../00 libraries/vuejs/vue-2.3.3.js"></script>
     <script type="text/javascript" src="script.js"></script>
