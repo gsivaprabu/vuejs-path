@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../00 libraries/bootstrap4/bootstrap.min.4.0.0-alpha.6.css">
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <div id="growler">
+            <form>
+                <input type="search" placeholder="search...">
+                <div v-on:click="grandparentClick1">
+                    <div v-on:click="parentClick1">
+                        <button v-on:click="executeSearch1" type="button">Search</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <br>
+            <form>
+                <input v-model="query" type="search" placeholder="search...">
+                <div v-on:click.capture="grandparentClick">
+                    <div v-on:click.capture="parentClick">
+                        <button v-on:click.capture="executeSearch" type="button">Search</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <br>
+            <form>
+                <input type="search" placeholder="search...">
+                <div v-on:click.capture="grandparentClick2">
+                    <div v-on:click="parentClick2">
+                        <button v-on:click="executeSearch2" type="button">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="../../00 libraries/jqueryslim/jquery-3.1.1.slim.min.js "></script>
+    <script src="../../00 libraries/tetherjs/tether.min.1.4.0.js "></script>
+    <script src="../../00 libraries/bootstrap4/bootstrap.min.4.0.0-alpha.6.js "></script>
+    <script src="../../00 libraries/vuejs/vue.2.1.10.js " type="text/javascript "></script>
+    <script src="script.js " type="text/javascript "></script>
+</body>
+
+</html>
