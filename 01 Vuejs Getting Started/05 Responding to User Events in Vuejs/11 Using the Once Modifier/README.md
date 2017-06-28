@@ -1,4 +1,4 @@
-# 11 Responding to User Events in Vuejs -  Using the Once Modifier
+# 11 Responding to User Events in Vuejs - Using the Once Modifier
 
 - Run an event one, and only one, time.
 - t	hose things used for server validation times.
