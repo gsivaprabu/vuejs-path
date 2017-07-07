@@ -34,6 +34,10 @@
                     </ul>
                 </nav>
             </form>
+            <li v-for="(item, index) in items">
+                using Index - {{ index }} - {{ item.message }}
+            </li>
+              <span v-for="n in 10">{{ n }}</span>
         </div>
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
