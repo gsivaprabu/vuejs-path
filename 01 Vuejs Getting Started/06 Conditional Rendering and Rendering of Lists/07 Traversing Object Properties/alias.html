@@ -22,22 +22,25 @@
     <div class="container">
         <br />
         <div id="growler">
-            <form style="width:100%;">
-                <p>
-                    This example shows how to use the <code>v-for</code> directive to loop a specific number of times.
-                </p>
-                <nav>
-                    <ul class="pagination">
-                        <li v-for="page in pageCount" class="page-item">
-                            <a href="#" v-on:click="search(page);" class="page-link">{{ page }}</a>
-                        </li>
-                    </ul>
-                </nav>
-            </form>
-            <li v-for="(item, index) in items">
-                using Index - {{ index }} - {{ item.message }}
-            </li>
-              <span v-for="n in 10">{ n }</span>
+            <ul>
+                <li v-for="v in currentUser">
+                    {{v}}
+                </li>
+            </ul>
+            <br>
+            <br>
+            <ul>
+                <li v-for="(v,k) in currentUser">
+                    {{k}} => {{v}}
+                </li>
+            </ul>
+            <br>
+            <br>
+            <ul>
+                <li v-for="(v,k,i) in currentUser">
+                    {{i}} => {{k}} => {{v}}
+                </li>
+            </ul>
         </div>
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -45,7 +48,7 @@
     <script src="../../00 libraries/tetherjs/tether.min.1.4.0.js "></script>
     <script src="../../00 libraries/bootstrap4/bootstrap.min.4.0.0-alpha.6.js "></script>
     <script src="../../00 libraries/vuejs/vue-2.2.5.js" type="text/javascript "></script>
-    <script src="loop.js" type="text/javascript "></script>
+    <script src="alias.js" type="text/javascript "></script>
 </body>
 
 </html>
