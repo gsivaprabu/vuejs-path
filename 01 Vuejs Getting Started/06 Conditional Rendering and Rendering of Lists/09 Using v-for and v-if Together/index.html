@@ -21,39 +21,17 @@
 <body>
     <div class="container">
         <div id="growler">
-            <ul>
-                <li v-for="page in pages">
-                    <a href="#">{{ page }}</a>
-                </li>
-            </ul>
-        </div>
-        <div id="growler1">
-            <ul>
-                <li v-for="page in pages">
-                    <a v-bind:href="page.url">
-											{{ page.number}}
-										</a>
-                </li>
-            </ul>
-        </div>
-        <div id="growler2">
-            <ul>
-                <li v-for="(page, i) in pages">
-                    <a v-bind:href="page.url">
-											{{ page.number}}
-										</a>
-                    <small>indexValue => {{ i}}</small>
-                </li>
-            </ul>
-        </div>
-        <div id="growler3">
-            <div v-for="page in pages">
-                <b>Page: {{ page.number}}</b>
-                <div v-for="sec in page.sections">
-                    {{page.number}}-{{ sec }}
-                </div>
-                <br/>
+            <div>
+                <label><strong>Max Alcohol by Volume (a.b.v.)</strong></label>
+                <input type="range" v-model="maxAbv" min="0" max="100" />
+                <small>{{ maxAbv}}%</small>
             </div>
+            <ul>
+                <li><strong>Beers</strong></li>
+                <li v-for="beer in beers" v-if="beer.abv< maxAbv">
+                    {{ beer }}
+                </li>
+            </ul>
         </div>
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
