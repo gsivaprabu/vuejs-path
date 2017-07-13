@@ -21,6 +21,7 @@ var growler = new Vue({
 
         numericallySortClick: function() {
             this.numericallySortedBeers = this.abv.slice();
+            console.log("this.numericallySortedBeers", this.numericallySortedBeers);
             this.numericallySortedAbv.sort(function(v1, v2) {
                 return v1 - v2;
             });
