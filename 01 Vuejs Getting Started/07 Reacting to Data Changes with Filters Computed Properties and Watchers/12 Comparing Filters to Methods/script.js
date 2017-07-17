@@ -7,34 +7,40 @@ var growler = new Vue({
             { name: 'Aswang Ale', ibu: '31 i.b.u.' }
         ]
     },
-
     filters: {
         convertIBU: function(value, empty) {
             if (!value) {
                 return empty;
             }
 
-            value = value.toString();
-            if (this.growler) {
-                value = this.growler.$options.filters.removePeriods(value);
-                value = this.growler.$options.filters.toUpperCase(value);
-            }
-            return value;
+            console.log('convertIBU: ' + value);
+            return value.toString();
         },
 
         removePeriods: function(value) {
+            console.log('removePeriods: ' + value);
             return value.replace(/\./g, '');
         },
 
         toUpperCase: function(value) {
+            console.log('toUpperCase: ' + value);
             return value.toUpperCase();
         }
     },
 
     methods: {
-        applyFilters: function() {
-            var item = this.results[0];
-            Vue.set(this.results, 0, item);
+        removePeriods: function(v) {
+            if (!v) {
+                return '';
+            }
+            return v.replace(/\./g, '');
+        },
+
+        toUpperCase: function(v) {
+            if (!v) {
+                return '';
+            }
+            return v.toUpperCase();
         }
     }
 });

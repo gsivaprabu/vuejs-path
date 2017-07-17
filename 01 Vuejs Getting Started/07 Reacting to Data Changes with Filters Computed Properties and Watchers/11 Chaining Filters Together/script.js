@@ -9,6 +9,7 @@ var growler = new Vue({
     },
     filters: {
         convertIBU: function(value, empty) {
+            console.log("value", value);
             if (!value) {
                 return empty;
             }
