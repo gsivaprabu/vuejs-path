@@ -24,12 +24,14 @@
         <div id="growler">
             <form style="width:100%;">
                 <p>
-                    This example shows how a watcher function works
+                    This example shows how to call filters programmatically. Click the "Load Items" button.
                 </p>
                 <div v-for="result in results">
                     <div>{{ result.name }}</div>
                     <small class="text-muted">{{ result.ibu | convertIBU('--') }}</small>
                 </div>
+                <br />
+                <button class="btn btn-default" v-on:click.prevent="applyFilters">Apply Filters</button>
             </form>
         </div>
     </div>

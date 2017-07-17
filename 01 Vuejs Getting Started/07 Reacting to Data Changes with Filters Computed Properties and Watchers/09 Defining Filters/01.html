@@ -11,9 +11,6 @@
         border-style: solid;
         padding: 3rem;
     }
-    .red{
-    	color: red;
-    }
 
     [v-cloak] {
         display: none;
@@ -30,8 +27,8 @@
                     This example shows how a watcher function works
                 </p>
                 <div v-for="result in results">
-                    <div class="red">{{ result.name }}</div>
-                    <small class="text-muted">{{ result.ibu | convertIBU }}</small>
+                    <div>{{ result.name }}</div>
+                    <small class="text-muted">{{ result.ibu | convertIBU('--') }}</small>
                 </div>
             </form>
         </div>
