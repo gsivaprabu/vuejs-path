@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../00 libraries/bootstrap4/bootstrap.min.4.0.0-alpha.6.css">
+    <style type="text/css">
+    .event-block {
+        border-width: 1px;
+        border-style: solid;
+        padding: 3rem;
+    }
+
+    [v-cloak] {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+        <div class="container">
+            <br />
+
+            <div id="growler">
+                <form style="width:100%;">
+                    <p>
+                        This example shows how a watcher function works
+                    </p>
+
+                    <div v-for="result in results">
+                        <div>{{ result.name }}</div>
+                        <small class="text-muted">{{ result.ibu | convertIBU('--') | removePeriods | toUpperCase }}</small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="../../00 libraries/jqueryslim/jquery-3.1.1.slim.min.js "></script>
+    <script src="../../00 libraries/tetherjs/tether.min.1.4.0.js "></script>
+    <script src="../../00 libraries/bootstrap4/bootstrap.min.4.0.0-alpha.6.js "></script>
+    <script src="../../00 libraries/axios/axios.0.16.2min.js"></script>
+    <script src="../../00 libraries/vuejs/vue-2.2.5.js" type="text/javascript "></script>
+    <script src="02.js" type="text/javascript "></script>
+</body>
+
+</html>
