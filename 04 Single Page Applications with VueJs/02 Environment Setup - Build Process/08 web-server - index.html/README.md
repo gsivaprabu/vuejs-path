@@ -16,3 +16,5 @@ app.get("*", (req, res) => {
   res.end();
 });
 ```
+- Then add the **PATH**
+- using **dirname** taken as the root directory
