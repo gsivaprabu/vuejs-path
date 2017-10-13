@@ -1,6 +1,8 @@
-const express = require("express");
-const app = express();
+# 02 Environment Setup - Build Process - 08 web-server - index.html
 
+- Require the file system and add the index.html as default loading
+
+```js
 const fs = require("fs");
 const path = require("path");
 
@@ -13,8 +15,4 @@ app.get("*", (req, res) => {
   res.write(indexHTML);
   res.end();
 });
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`server started at http://localhost:${port}`);
-});
+```
