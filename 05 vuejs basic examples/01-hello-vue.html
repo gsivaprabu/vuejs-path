@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="UTF-8">
+<title>Vue.js demo</title>
+
+<script src="libs/vue.js"></script>
+
+<div id="demo">
+    {{ message }}
+</div>
+
+<script>
+    const vm = new Vue({
+        el: '#demo',
+        data: {
+            message: 'Hello Vue.js'
+        }
+    })
+</script>
