@@ -2,6 +2,7 @@
 
 - SPA with Vuejs
 - Most popular JS Framework
+- Lear Fundamentals
 - various components and libraries
 - Creating a Build Process
 - Single File Components
