@@ -1,12 +1,10 @@
-console.log("loaded..");
-
-import Vue from "vue";
+import Vue from 'vue'
 
 const app = new Vue({
   data: {
-    hello: "Hi Pranav ?"
+    hello: 'Hi Pranavs ?'
   },
   template: '<div id="app">{{hello}}</div>'
 })
 
-export { app };
+export { app }
