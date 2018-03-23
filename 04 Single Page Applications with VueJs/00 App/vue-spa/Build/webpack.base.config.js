@@ -8,17 +8,16 @@ const config = {
       rules:[
         {
           enforce:'pre',
-          test:/(\.js$)/,
+          test:/(\.js$) | (\.vue$)/,
           loader:'eslint-loader',
           exclude:/node_modules/
+        },
+        {
+          test:/\.vue$/,
+          loader:'vue-loader'
         }
       ]
     },
-  resolve: {
-    alias: {
-      vue: 'Vue/dist/vue.js'
-    }
-  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
