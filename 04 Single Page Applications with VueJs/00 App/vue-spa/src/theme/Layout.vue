@@ -13,13 +13,12 @@
       <div class="container">
         <div class="content has-text-centered">
           Follow us on
-          <a href="https://twitter.com/gsivaprabu" target="_blank">Twfdfditter</a>
+          <a href="https://twitter.com/gsivaprabu" target="_blank">Twitter</a>
         </div>
       </div>
     </footer>
   </div>
 </template>
 <script>
-export default {df}
-d
+export default {}
 </script>
