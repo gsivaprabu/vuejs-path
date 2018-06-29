@@ -1,4 +1,4 @@
-# 06 vuejs fundamentals - 02 Getting Started with the Vue.js CLI - 02 Getting Started with the Vue.js CLI - Gaining a Conceptual Understanding of Vue
+# 06 vuejs fundamentals - 02 Getting Started with the Vue.js CLI - 02 Gaining a Conceptual Understanding of Vue
 
 - Heart of the vuejs application is vue instance
 - Is create one
