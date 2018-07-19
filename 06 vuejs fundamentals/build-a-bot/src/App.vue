@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <header>
       <nav>
         <ul>
           <li class="nav-item">
-            <img src="./assets/build-a-bot-logo.png" class="logo" />
+            <img src='./assets/build-a-bot-logo.png' class="logo" />
             Build-a-Bot
           </li>
         </ul
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import HomePage from "./components/HomePage.vue";
+import HomePage from './components/HomePage.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    HomePage
-  }
+    HomePage,
+  },
 };
 </script>
 
