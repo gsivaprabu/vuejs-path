@@ -1,0 +1,3 @@
+# Vuejs Big Picture
+
+Saying Vue.js is a fast-growing and exciting library is a major understatement. With nearly 100,000 stars on GitHub, Vue.js is rapidly becoming the default choice for web application development. In this course, Vue.js: Big Picture, you will get a big picture overview of Vue, understanding what its features are and where those features are most useful. First, you will learn Vue's capabilities and limitations. Next, you will discover the libraries of the Vue ecosystem. Finally, you will explore how to use Vue for prototyping. When you’re finished with this course, you will be ready to start your journey towards being a Vue expert.
