@@ -1,4 +1,4 @@
-# 07 Vuejs Big Picture - 03 Why use VueJS? - 05 Scaffolding and Collaborating with Vue CLI
+# 07 Vuejs Big Picture - 04 The Vue Ecosystem - 05 Scaffolding and Collaborating with Vue CLI
 - Most essential
 - Tool for creating building and updating Vue applications
 - Provides standard way to update app across whole team

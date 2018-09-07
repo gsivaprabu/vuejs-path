@@ -1,4 +1,4 @@
-# 07 Vuejs Big Picture - 03 Why use VueJS? - 03 Managing State with Vuex
+# 07 Vuejs Big Picture - 04 The Vue Ecosystem - 03 Managing State with Vuex
 
 - Provides a way of updating your state
 - user interaction

@@ -1,4 +1,4 @@
-# 07 Vuejs Big Picture - 03 Why use VueJS? - 06 Vue Pitfalls and Drawbacks
+# 07 Vuejs Big Picture - 04 The Vue Ecosystem - 06 Vue Pitfalls and Drawbacks
 
 - Needs support from ecosystem
 - Tricky reactivity

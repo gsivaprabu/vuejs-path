@@ -1,4 +1,4 @@
-# 07 Vuejs Big Picture - 03 Why use VueJS? - 04 Building Websites with Vuetify
+# 07 Vuejs Big Picture - 04 The Vue Ecosystem - 04 Building Websites with Vuetify
 
 - Contains sleek and per formant Vue components
 - Has a material design aesthetic

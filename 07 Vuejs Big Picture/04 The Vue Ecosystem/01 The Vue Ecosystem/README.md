@@ -1,4 +1,4 @@
-# 07 Vuejs Big Picture - 03 Why use VueJS? - 01 The Vue Ecosystem
+# 07 Vuejs Big Picture - 04 The Vue Ecosystem - 01 The Vue Ecosystem
 
 - Eco System
 - Separate from VUE
