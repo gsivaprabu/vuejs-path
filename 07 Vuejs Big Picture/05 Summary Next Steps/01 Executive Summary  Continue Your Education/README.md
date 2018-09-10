@@ -14,3 +14,8 @@
 - Great for prototyping
 - Is easy to learn and use
 - Strong community support
+
+# Try to learn below Courses
+
+1. [Vue.js Fundamentals - by Jim Cooper](https://app.pluralsight.com/library/courses/vuejs-fundamentals/table-of-contents)
+2. [Vue.js: Getting Started - by Chad Campbell](https://app.pluralsight.com/library/courses/vuejs-getting-started/table-of-contents)
