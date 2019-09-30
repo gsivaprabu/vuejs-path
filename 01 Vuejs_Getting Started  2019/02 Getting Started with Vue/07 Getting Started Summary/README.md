@@ -1,4 +1,4 @@
-# 07 Getting Started Summary
+# 07 Getting Started Summary 
 
 [John Pappa as VSCODE  Winter is comming Theme](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming&wt.mc_id=vuegettingstarted-github-joapa)
 
