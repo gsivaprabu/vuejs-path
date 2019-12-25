@@ -111,6 +111,7 @@ export default {
       this.message = 'Trigger Cancel()';
     },
     clearPower() {
+      console.log(this.hero.power);
       this.hero.power = '';
     },
     saveHero() {
