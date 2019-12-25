@@ -66,17 +66,19 @@
             </div>
           </div>
           <footer class="card-footer">
-            <button class="link card-footer-item cancel-button">
+            <button class="link card-footer-item cancel-button" @click="cancelHero()">
               <i class="fas fa-undo"></i>
               <span>Cancel</span>
             </button>
-            <button class="link card-footer-item">
+            <button class="link card-footer-item" @click="saveHero()">
               <i class="fas fa-save"></i>
               <span>Save</span>
             </button>
           </footer>
         </div>
-        <div class="notification is-info">{{message}}</div>
+        <div class="notification is-info">
+          <pre>{{message}}</pre>
+        </div>
       </div>
     </div>
   </div>
@@ -96,8 +98,16 @@ export default {
         power: '',
         active: true,
       },
-      message: 'Test Message',
+      message: 'Default messsage while click the save button data populated',
     };
+  },
+  methods: {
+    cancelHero() {
+      this.message = 'Trigger Cancel()';
+    },
+    saveHero() {
+      this.message = JSON.stringify(this.hero, null, '\n');
+    },
   },
 };
 </script>
