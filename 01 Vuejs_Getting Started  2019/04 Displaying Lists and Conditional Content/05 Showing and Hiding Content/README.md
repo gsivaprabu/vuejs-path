@@ -1,26 +1,13 @@
-<template>
-  <div class="content-container">
-    <div class="section content-title-group">
-      <h2 class="title">Heroes</h2>
-    </div>
-    <div class="columns">
-      <div class="column is-3">
-        <header class="card-header">
-          <p class="card-header-title">heroes list</p>
-        </header>
-        <ul class="list is-hoverable">
-          <li v-for="hero in heroes" :key="hero.id">
-            <a
-              class="list-item"
-              @click="selectedHero = hero"
-              :class="{'is-active':selectedHero===hero}"
-            >
-              <span>{{hero.firstName}}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+# 05 Showing and Hiding Content
+- Show or Hide content
+- Does not remove from the DOM
+- use **v-show==expression**
+- Show or hide the content based on expression
+- This would not worked when your selectedHero is undefined
+
+
+
+```html
     <div class="columns" v-if="selectedHero">
       <div class="column is-3">
         <header class="card-header">
@@ -54,10 +41,9 @@
         </div>
       </div>
     </div>
-  </div>
-</template>
+```
 
-<script>
+```javascript
 export default {
   name: 'Heroes',
   data() {
@@ -93,4 +79,4 @@ export default {
     };
   },
 };
-</script>
+```
