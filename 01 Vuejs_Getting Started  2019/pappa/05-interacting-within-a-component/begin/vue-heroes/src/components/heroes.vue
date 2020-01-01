@@ -33,41 +33,28 @@
             <div class="content">
               <div class="field">
                 <label class="label" for="id">id</label>
-                <label class="input" id="id" readonly>{{
+                <label class="input" id="id" readonly>
+                  {{
                   selectedHero.id
-                }}</label>
+                  }}
+                </label>
               </div>
               <div class="field">
                 <label class="label" for="firstName">first name</label>
-                <input
-                  class="input"
-                  id="firstName"
-                  v-model="selectedHero.firstName"
-                />
+                <input class="input" id="firstName" v-model="selectedHero.firstName" />
               </div>
               <div class="field">
                 <label class="label" for="lastName">last name</label>
-                <input
-                  class="input"
-                  id="lastName"
-                  v-model="selectedHero.lastName"
-                />
+                <input class="input" id="lastName" v-model="selectedHero.lastName" />
               </div>
               <div class="field">
                 <label class="label" for="description">description</label>
-                <input
-                  class="input"
-                  id="description"
-                  v-model="selectedHero.description"
-                />
+                <input class="input" id="description" v-model="selectedHero.description" />
               </div>
             </div>
           </div>
           <footer class="card-footer">
-            <button
-              class="link card-footer-item cancel-button"
-              @click="cancelHero()"
-            >
+            <button class="link card-footer-item cancel-button" @click="cancelHero()">
               <i class="fas fa-undo"></i>
               <span>Cancel</span>
             </button>
@@ -111,6 +98,13 @@ const ourHeroes = [
 ];
 export default {
   name: 'Heroes',
+  data() {
+    return {
+      heroes: ourHeroes,
+      selectedHero: undefined,
+      message: '',
+    };
+  },
   methods: {
     handleTheCapes(newValue) {
       const value = parseInt(newValue, 10);
