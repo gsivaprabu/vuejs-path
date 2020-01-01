@@ -1,0 +1,1 @@
+# 07 Recap of Tools Inside of a Component
