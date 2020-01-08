@@ -10,17 +10,12 @@
               <div class="card">
                 <div class="card-content">
                   <div class="content">
-                    <div :key="hero.name" class="name">
-                      {{ hero.firstName }} {{ hero.lastName }}
-                    </div>
+                    <div :key="hero.name" class="name">{{ hero.firstName }} {{ hero.lastName }}</div>
                     <div class="description">{{ hero.description }}</div>
                   </div>
                 </div>
                 <footer class="card-footer">
-                  <button
-                    class="link card-footer-item"
-                    @click="selectHero(hero)"
-                  >
+                  <button class="link card-footer-item" @click="selectHero(hero)">
                     <i class="fas fa-check"></i>
                     <span>Select</span>
                   </button>
@@ -42,9 +37,7 @@
 </template>
 
 <script>
-import { format } from 'date-fns';
-
-import { displayDateFormat, ourHeroes } from '../shared';
+import { ourHeroes } from '../shared';
 import HeroDetail from '@/components/hero-detail';
 
 export default {
@@ -57,16 +50,9 @@ export default {
       capeMessage: '',
     };
   },
-  components:{HeroDetail},
+  components: { HeroDetail },
   created() {
     this.loadHeroes();
-  },
-  computed: {
-    fullName() {
-      return this.selectedHero
-        ? `${this.selectedHero.firstName} ${this.selectedHero.lastName}`
-        : '';
-    },
   },
   methods: {
     async getHeroes() {
@@ -91,39 +77,6 @@ export default {
     },
     selectHero(hero) {
       this.selectedHero = hero;
-    },
-    handleTheCapes(newValue) {
-      const value = parseInt(newValue, 10);
-      switch (value) {
-        case 0:
-          this.capeMessage = 'Where is my cape?';
-          break;
-        case 1:
-          this.capeMessage = 'One is all I need';
-          break;
-        case 2:
-          this.capeMessage = 'Alway have a spare';
-          break;
-        default:
-          this.capeMessage = 'You can never have enough capes';
-          break;
-      }
-    },
-  },
-  watch: {
-    'selectedHero.capeCounter': {
-      immediate: true,
-      handler(newValue, oldValue) {
-        console.log(
-          `CapeCounter watcher evalauted. old=${oldValue}, new=${newValue}`
-        );
-        this.handleTheCapes(newValue);
-      },
-    },
-  },
-  filters: {
-    shortDate: function(value) {
-      return format(value, displayDateFormat);
     },
   },
 };
