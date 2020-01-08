@@ -1,12 +1,18 @@
 <template>
     <div>
-        Hello !
+        Hello {{hero.firstName}}!
     </div>
 </template>
 
 <script>
     export default {
-        name:'HeroDetails'
+        name:'HeroDetails',
+        props: {
+            hero: {
+                type: Object,
+                default: () => {}
+            },
+        },
     }
 </script>
 
