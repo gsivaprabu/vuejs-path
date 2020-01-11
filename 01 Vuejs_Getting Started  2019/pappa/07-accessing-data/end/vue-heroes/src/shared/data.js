@@ -5,7 +5,7 @@ import { inputDateFormat } from './constants';
 
 import { API } from './config';
 
-const getHeroes = async function() {
+const getHeroes = async function () {
   // cant just return this, because its not what we want
   // return response.data;
   // but what if there is bad data in the response?
