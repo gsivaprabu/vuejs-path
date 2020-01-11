@@ -1,1 +1,16 @@
 # 07 Sharing Code with Mixins and Modules
+- Distribute reusable  functionalities across multiple components
+- Example
+    - Methods
+    - Computed
+    - Life Cycle Hooks
+    - Data
+    - Watches
+- When mixins Conflict with Components
+- Methods Components and Computeds
+    - Merged, Precedence given to the component's method     
+- Data
+    - Merged Superset, precedence given to components data
+- Watches and hooks
+    - Both run, with mixins running before component
+-              
