@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import App from '@/app';
+import router from 'vue-router';
 
 Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app');
