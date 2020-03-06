@@ -1,15 +1,15 @@
-import Vue from 'vue'
+import Vue from 'vue' // Addd the router to this App
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'history', // Enable history mode
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/', // Default mode
       name: 'home',
       component: Home
     },
