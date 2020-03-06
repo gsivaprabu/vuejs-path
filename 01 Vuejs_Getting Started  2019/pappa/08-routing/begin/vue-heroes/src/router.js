@@ -1,6 +1,6 @@
-import Vue from 'vue' // Addd the router to this App
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue'; // Addd the router to this App
+import Router from 'vue-router';
+import Heroes from './views/heroes.vue';
 
 Vue.use(Router)
 
@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/', // Default mode
-      name: 'home',
-      component: Home
+      name: 'heroes',
+      component: Heroes,
     },
     {
       path: '/about',
