@@ -69,7 +69,6 @@ export default {
       this.message = '';
     },
     selectHero(hero) {
-      console.log('hero ---->', hero);
       this.selectedHero = hero;
     },
   },
