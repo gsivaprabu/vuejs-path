@@ -14,7 +14,7 @@ import HeaderBar from '@/components/header-bar';
 import NavBar from '@/components/navbar';
 export default {
   name: 'App',
-  components: { HeaderBar,NavBar}
+  components: { HeaderBar, NavBar },
 };
 </script>
 <style lang="scss">

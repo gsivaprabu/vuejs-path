@@ -56,7 +56,7 @@ export default {
   props: {
     id: {
       type: Number,
-      default: 0,
+      default: 0, // this.$router.params.id
     },
   },
   data() {

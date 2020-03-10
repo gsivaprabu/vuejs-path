@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Heroes from './views/heroes.vue';
 import About from './views/about.vue';
+import HeroDetail from './views/hero-detail.vue';
 
 Vue.use(Router);
 
@@ -17,6 +18,12 @@ export default new Router({
       path: '/heroes',
       name: 'heroes',
       component: Heroes,
+    },
+    {
+      path: '/heroes/:id',
+      name: 'hero-detail',
+      component: HeroDetail,
+      props: true,
     },
     {
       path: '/about',

@@ -15,4 +15,4 @@
     </div>
     <router-view/> // Put that component that to navigate to here
   </div>
-```  
+```
