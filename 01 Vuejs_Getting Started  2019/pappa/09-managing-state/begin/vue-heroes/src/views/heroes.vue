@@ -19,17 +19,12 @@
               <div class="card">
                 <div class="card-content">
                   <div class="content">
-                    <div :key="hero.name" class="name">
-                      {{ hero.firstName }} {{ hero.lastName }}
-                    </div>
+                    <div :key="hero.name" class="name">{{ hero.firstName }} {{ hero.lastName }}</div>
                     <div class="description">{{ hero.description }}</div>
                   </div>
                 </div>
                 <footer class="card-footer">
-                  <button
-                    class="link card-footer-item"
-                    @click="askToDelete(hero)"
-                  >
+                  <button class="link card-footer-item" @click="askToDelete(hero)">
                     <i class="fas fa-trash"></i>
                     <span>Delete</span>
                   </button>
@@ -54,20 +49,18 @@
       :isOpen="showModal"
       @handleNo="closeModal"
       @handleYes="deleteHero"
-    >
-    </Modal>
+    ></Modal>
   </div>
 </template>
 
 <script>
 import Modal from '@/components/modal';
 import { dataService } from '../shared';
-
+import { mapState } from 'vuex';
 export default {
   name: 'Heroes',
   data() {
     return {
-      heroes: [],
       heroToDelete: null,
       message: '',
       showModal: false,
@@ -95,13 +88,19 @@ export default {
       await this.loadHeroes();
     },
     async loadHeroes() {
-      this.heroes = [];
       this.message = 'getting the heroes, please be patient';
-      this.heroes = await dataService.getHeroes();
+      // this.heroes = this.$store.state.heroes;
+      // this.heroes = await dataService.getHeroes();
       this.message = '';
     },
   },
   computed: {
+    // ...mapState({ heroes: state => state.heroes }),
+    // ...mapState({ heroes: 'heroes' }),
+    ...mapState(['heroes']),
+    /*     heroes() {
+      return this.$store.state.heroes;
+    }, */
     modalMessage() {
       const name =
         this.heroToDelete && this.heroToDelete.fullName
