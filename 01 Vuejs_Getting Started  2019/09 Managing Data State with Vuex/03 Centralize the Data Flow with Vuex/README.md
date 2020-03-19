@@ -42,4 +42,3 @@ Component => Component =. Shared Modules
 ### VUEX FLOW THIS SCENARIO
 
 ![image info](vuex_flow.png)
-
