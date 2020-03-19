@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Heroes from './views/heroes.vue';
-import About from './views/about.vue';
-import HeroDetail from './views/hero-detail.vue';
+import PageNotFound from './views/page-not-found.vue';
 
 Vue.use(Router);
 
@@ -20,12 +18,17 @@ export default new Router({
     {
       path: '/heroes',
       name: 'heroes',
-      component: Heroes,
+      // component: Heroes,
+      component: () =>
+        import(/* webpackChunkName: "bundle-heroes" */ './views/heroes.vue'),
+      // props: true,
     },
     {
       path: '/heroes/:id',
       name: 'hero-detail',
-      component: HeroDetail,
+      // component: HeroDetail,
+      component: () =>
+        import(/* webpackChunkName: "bundle-hero-details" */ './views/hero-detail.vue'),
       // props: true,
       props: parsePars,
     },
@@ -35,7 +38,13 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: About,
+      // component: About,
+      component: () =>
+        import(/* webpackChunkName: "bundle-about" */ './views/about.vue'),
+    },
+    {
+      path: '*',
+      component: PageNotFound,
     },
   ],
 });
