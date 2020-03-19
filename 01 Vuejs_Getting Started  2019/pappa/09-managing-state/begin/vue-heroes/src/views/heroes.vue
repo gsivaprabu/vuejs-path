@@ -19,12 +19,17 @@
               <div class="card">
                 <div class="card-content">
                   <div class="content">
-                    <div :key="hero.name" class="name">{{ hero.firstName }} {{ hero.lastName }}</div>
+                    <div :key="hero.name" class="name">
+                      {{ hero.firstName }} {{ hero.lastName }}
+                    </div>
                     <div class="description">{{ hero.description }}</div>
                   </div>
                 </div>
                 <footer class="card-footer">
-                  <button class="link card-footer-item" @click="askToDelete(hero)">
+                  <button
+                    class="link card-footer-item"
+                    @click="askToDelete(hero)"
+                  >
                     <i class="fas fa-trash"></i>
                     <span>Delete</span>
                   </button>
@@ -56,7 +61,7 @@
 <script>
 import Modal from '@/components/modal';
 import { dataService } from '../shared';
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 export default {
   name: 'Heroes',
   data() {
@@ -73,6 +78,8 @@ export default {
     await this.loadHeroes();
   },
   methods: {
+    ...mapActions(['getHeroesAction']),
+
     askToDelete(hero) {
       this.heroToDelete = hero;
       this.showModal = true;
@@ -91,6 +98,8 @@ export default {
       this.message = 'getting the heroes, please be patient';
       // this.heroes = this.$store.state.heroes;
       // this.heroes = await dataService.getHeroes();
+      // await this.$store.dispatch('getHeroesAction');
+      await this.getHeroesAction();
       this.message = '';
     },
   },
