@@ -9,18 +9,20 @@
               <div class="card">
                 <div class="card-content">
                   <div class="content">
-                    <div :key="hero.name" class="name">{{ hero.firstName }} {{ hero.lastName }}</div>
+                    <div :key="hero.name" class="name">
+                      {{ hero.firstName }} {{ hero.lastName }}
+                    </div>
                     <div class="description">{{ hero.description }}</div>
                   </div>
                 </div>
                 <footer class="card-footer">
                   <router-link
                     :to="{ name: 'hero-detail', params: { id: hero.id } }"
-                      tag="button"
-                      class="link card-footer-item"
-                    >
-                      <i class="fas fa-check"></i>
-                      <span>Select</span>
+                    tag="button"
+                    class="link card-footer-item"
+                  >
+                    <i class="fas fa-check"></i>
+                    <span>Select</span>
                   </router-link>
                 </footer>
               </div>
@@ -40,8 +42,6 @@
 
 <script>
 import { dataService } from '../shared';
-import HeroDetail from './hero-detail';
-
 export default {
   name: 'Heroes',
   data() {
