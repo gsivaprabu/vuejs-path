@@ -74,11 +74,11 @@ export default {
   },
   methods: {
     cancelHero() {
-      this.$emit('done');
+      this.$router.push({ name: 'heroes' });
     },
     async saveHero() {
       await dataService.updateHero(this.hero);
-      this.$emit('done');
+      this.$router.push({ name: 'heroes' });
     },
   },
 };
