@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+
 import { dataService } from '../shared';
 import {
   ADD_HERO,
@@ -10,12 +11,9 @@ import {
 
 Vue.use(Vuex);
 
-const state = {
-  /*  heroes: [
-    { id: 1, firstName: 'Holly', lastName: 'Smith', description: 'hello' },
-  ], */
+const state = () => ({
   heroes: [],
-};
+});
 
 const mutations = {
   [ADD_HERO](state, hero) {
@@ -33,6 +31,7 @@ const mutations = {
     state.heroes = [...state.heroes.filter(p => p.id !== hero.id)];
   },
 };
+
 const actions = {
   // actions let us get to ({ state, getters, commit, dispatch }) {
   async addHeroAction({ commit }, hero) {
@@ -52,7 +51,10 @@ const actions = {
     commit(UPDATE_HERO, updatedHero);
   },
 };
+
 const getters = {
+  // heroes: state => state.heroes,
+  // parameterized getters are not cached. so this is just a convenience to get the state.
   getHeroById: state => id => state.heroes.find(h => h.id === id),
 };
 

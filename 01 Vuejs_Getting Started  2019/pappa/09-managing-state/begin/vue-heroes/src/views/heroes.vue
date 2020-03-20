@@ -54,18 +54,21 @@
       :isOpen="showModal"
       @handleNo="closeModal"
       @handleYes="deleteHero"
-    ></Modal>
+    >
+    </Modal>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 import Modal from '@/components/modal';
-import { dataService } from '../shared';
-import { mapState, mapActions } from 'vuex';
+// import { dataService } from '../shared';
+
 export default {
   name: 'Heroes',
   data() {
     return {
+      // heroes: [],
       heroToDelete: null,
       message: '',
       showModal: false,
@@ -78,8 +81,9 @@ export default {
     await this.loadHeroes();
   },
   methods: {
-    ...mapActions(['getHeroesAction']),
-
+    ...mapActions(['getHeroesAction', 'deleteHeroAction']),
+    // map `this.deleteHeroAction(hero)` to `this.$store.dispatch('deleteHeroAction', hero)`
+    // map `this.getHeroesAction()` to `this.$store.dispatch('getHeroesAction')`
     askToDelete(hero) {
       this.heroToDelete = hero;
       this.showModal = true;
@@ -90,26 +94,33 @@ export default {
     async deleteHero() {
       this.closeModal();
       if (this.heroToDelete) {
-        dataService.deleteHero(this.heroToDelete);
+        await this.deleteHeroAction(this.heroToDelete);
       }
       await this.loadHeroes();
     },
     async loadHeroes() {
+      // this.heroes = [];
       this.message = 'getting the heroes, please be patient';
-      // this.heroes = this.$store.state.heroes;
       // this.heroes = await dataService.getHeroes();
+      // 1. dispatch the action
       // await this.$store.dispatch('getHeroesAction');
+      // 2. shortcut to dispatch using the mapped Action
       await this.getHeroesAction();
       this.message = '';
     },
   },
   computed: {
+    // 1.Access state
+    // heroes() {
+    //   return this.$store.state.heroes;
+    // },
+    // 2. map the state
     // ...mapState({ heroes: state => state.heroes }),
+    // 3. shorcut to map the state
     // ...mapState({ heroes: 'heroes' }),
+    // 4. quickest way to map state
     ...mapState(['heroes']),
-    /*     heroes() {
-      return this.$store.state.heroes;
-    }, */
+    // map this.heroes to store.state.heroes
     modalMessage() {
       const name =
         this.heroToDelete && this.heroToDelete.fullName
