@@ -1,5 +1,8 @@
 # Mutating State
 
+## Mutations
+- Synchronous operations to modify your state
+
 ```javascript
 
 import {
